@@ -9,9 +9,6 @@ function Navbar(){
           <h1 className="zain-extrabold display-1">Foodie Night</h1>
           <p className="zain-regular">A new flavour every month</p>
         </div>
-        <div>
-          <button className="btn btn-rsvp">RSVP Now</button>
-        </div>
       </nav>
     </>
   )

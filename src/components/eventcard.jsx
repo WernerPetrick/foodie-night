@@ -1,6 +1,6 @@
 import "../eventcard.css"
 
-function EventCard({image, date, title, description, quote, isPast = false}){
+function EventCard({image, date, title, description, quote, isPast = false, onRSVP}){
   return (
     <>
       <div className={`event-card ${isPast ? 'event-card-past' : ''}`}>
@@ -10,7 +10,15 @@ function EventCard({image, date, title, description, quote, isPast = false}){
           <p className="event-date">{date}</p>
           <p className="event-description">{description}</p>
           {quote && <blockquote className="event-quote in-light-italic">"{quote}"</blockquote>}
-          {!isPast && <button type="button" className="btn event-button">RSVP Now</button>}
+          {!isPast && (
+            <button 
+              type="button" 
+              className="btn event-button"
+              onClick={onRSVP}
+            >
+              RSVP Now
+            </button>
+          )}
         </div>
       </div>
     </>
